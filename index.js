@@ -299,12 +299,11 @@ Use addArtist to do the following:
 🌟 EXAMPLE: Invoking addArtist(artists, 'John Doe', '1988-2022', 'Full Stack Development', 'African American', 'I have a background in customer service at Big Retail Chain. I am attending BloomTech to become a Frontend Developer.') should return the artists array with the above object added to the end of the array. */
 
 function addArtist(artists, name, years, genre, nationality, bio) {
-  /*Your Code Here*/
-  let arrayCopy = [];
+  let arrayCopy = artists.slice();
 
-  return arrayCopy.push(name, years, genre, nationality, bio)
+   arrayCopy.push({name, years, genre, nationality, bio})
 
-
+   return arrayCopy
 
 }
 
