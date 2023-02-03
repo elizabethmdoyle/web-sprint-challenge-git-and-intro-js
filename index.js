@@ -273,15 +273,11 @@ Use removeArtist to do the following:
 🌟 EXAMPLE: if removeArtist is invoked with the artists array and the number 0, it will return the resulting array with Amedeo Modigliani removed from our dataset. */
 
 function removeArtist(artists, index) {
-  let artistRemovedArray = []
-       for(let i = 0; i < artists.length; i++) {
-        if(artists[i] === true) {
-       artistRemovedArray.push(artists[i])
-    } else {
-       console.log('skipped')
-    }
+  let artistRemovedArray = artists.slice();
+
+  artistRemovedArray.splice(index, 1)
       return artistRemovedArray
-  }
+  
 }
 
 
@@ -304,7 +300,9 @@ Use addArtist to do the following:
 
 function addArtist(artists, name, years, genre, nationality, bio) {
   /*Your Code Here*/
-  let arrayCopy = artists.slice();
+  let arrayCopy = [];
+
+  return arrayCopy.push(name, years, genre, nationality, bio)
 
 
 
