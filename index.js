@@ -222,7 +222,7 @@ There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is current
 
 console.log(artists[8].name)
 artists[8].name = 'Vincent Van Gogh';
-console.log(artists[8].name)
+console.log(artists[8].name, 'task 2')
 
 
 
@@ -242,7 +242,7 @@ return `the artist at index ${artists[index].id} is ${artists[index].name}`
 }
 
 
-console.log(getArtistByIndex(artists, 0))
+console.log(getArtistByIndex(artists, 0), 'task 3')
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use listOfNames to do the following: 
 1. Receive the artist array as an argument from a parameter 
@@ -252,14 +252,16 @@ Use listOfNames to do the following:
 */
 
 function listOfNames(artists) {
-      const newArray = [];
-      for(let i = 0; i < artists.length; i++) {
-        artists[i]
-        return artists[i].name
+      let newArray = [];
+        for(let i = 0; i < artists.length; i++) {
+                 if(artists[i].id <= 20) {
+            newArray.push(artists[i].name)
       }
+    }
+      return newArray
 }
 
-
+console.log(listOfNames(artists))
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use removeArtist to do the following:
