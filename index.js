@@ -307,7 +307,6 @@ function addArtist(artists, name, years, genre, nationality, bio) {
 
 }
 
-
 console.log(addArtist(artists, 'John Doe', '1988-2022', 'Full Stack Development', 'African American', 'I have a background in customer service at Big Retail Chain. I am attending BloomTech to become a Frontend Developer.'), 'task 6')
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Use lotsOfArt to do the following: 
@@ -317,12 +316,26 @@ Use lotsOfArt to do the following:
 🌟 EXAMPLE: lotsOfArt(artists) will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]
 */
 
-function lotsOfArt(/*Your Code Here*/) {
-  /*Your Code Here*/
+function lotsOfArt(artists) {
+  let aLotArray = [];
+
+  console.log(aLotArray, 'test');
+  for(let i = 0; i < artists.length; i++) {
+    if(artists[i].paintings >= 100) {
+      aLotArray.push(artists[i].name)
+    } else {
+      console.log('wrong console log')
+    }
+    
+  }
+  console.log('test', aLotArray)
+
+  return aLotArray
+
 }
 
 
-
+console.log(lotsOfArt(artists), 'task 7')
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 8: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Use artistInfo to do the following: 
 1. Receive the artist array as an argument passed from the FIRST parameter
