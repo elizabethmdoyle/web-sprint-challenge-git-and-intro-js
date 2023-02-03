@@ -220,6 +220,9 @@ console.log(artists[2].bio, 'task 2')
 (no function needed) 
 There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Fix this issue and console.log() to check your work. */
 
+console.log(artists[8].name)
+artists[8].name = 'Vincent Van Gogh';
+console.log(artists[8].name)
 
 
 
@@ -232,12 +235,14 @@ Use getArtistByIndex to do the following:
 
 🌟 EXAMPLE: if getArtistByIndex is invoked with the artists array and the number 0, it will return `the artist at index 0 is Amedeo Modigliani` */
 
-function getArtistByIndex(/*Your Code Here*/) {
-  /*Your Code Here*/
+function getArtistByIndex(artists, index) {
+  
+return `the artist at index ${artists[index].id} is ${artists[index].name}`
+
 }
 
 
-
+console.log(getArtistByIndex(artists, 0))
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use listOfNames to do the following: 
 1. Receive the artist array as an argument from a parameter 
@@ -246,8 +251,12 @@ Use listOfNames to do the following:
 🌟 EXAMPLE of return: ["Amedeo Modigliani", "Vasiliy Kandinskiy", "Diego Rivera"....]
 */
 
-function listOfNames(/*Your Code Here*/) {
-  /*Your Code Here*/
+function listOfNames(artists) {
+      const newArray = [];
+      for(let i = 0; i < artists.length; i++) {
+        artists[i]
+        return artists[i].name
+      }
 }
 
 
