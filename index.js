@@ -272,12 +272,20 @@ Use removeArtist to do the following:
 5. Return the resulting copied array
 🌟 EXAMPLE: if removeArtist is invoked with the artists array and the number 0, it will return the resulting array with Amedeo Modigliani removed from our dataset. */
 
-function removeArtist(/*Your Code Here*/) {
-  /*Your Code Here*/
+function removeArtist(artists, index) {
+  let artistRemovedArray = []
+       for(let i = 0; i < artists.length; i++) {
+        if(artists[i] === true) {
+       artistRemovedArray.push(artists[i])
+    } else {
+       console.log('skipped')
+    }
+      return artistRemovedArray
+  }
 }
 
 
-
+console.log(removeArtist(artists, 2), 'task 5')
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use addArtist to do the following: 
 1. Receive the artist array as an argument passed from the FIRST parameter 
@@ -294,12 +302,16 @@ Use addArtist to do the following:
 5. Add the newly created object to the copied array, then return the copied array
 🌟 EXAMPLE: Invoking addArtist(artists, 'John Doe', '1988-2022', 'Full Stack Development', 'African American', 'I have a background in customer service at Big Retail Chain. I am attending BloomTech to become a Frontend Developer.') should return the artists array with the above object added to the end of the array. */
 
-function addArtist(/*Your Code Here*/) {
+function addArtist(artists, name, years, genre, nationality, bio) {
   /*Your Code Here*/
+  let arrayCopy = artists.slice();
+
+
+
 }
 
 
-
+console.log(addArtist(artists, 'John Doe', '1988-2022', 'Full Stack Development', 'African American', 'I have a background in customer service at Big Retail Chain. I am attending BloomTech to become a Frontend Developer.'), 'task 6')
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Use lotsOfArt to do the following: 
 1. Receive the artist array as an argument passed from a parameter  
